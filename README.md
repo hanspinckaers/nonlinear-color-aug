@@ -22,10 +22,11 @@ transform = NonLinearColorJitter()
 augmented_image = transform(image)
 ```
 
-Or using **torchvision.transform**:
+Or inside a **torchvision.transform**:
 ```python
 transforms.Compose([
         transforms.CenterCrop(10),
+        NonLinearColorJitter(),
         transforms.ToTensor(),
     ])
 ```
